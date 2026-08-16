@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JUDY — 一切皆插件的 Agent Harness</title>
+  <meta name="description" content="JUDY：基于插件架构的智能体平台。一切皆插件，每个会话都可以组装成你专属的 Agent。" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top">
+      <img src="logo.png" alt="JUDY logo" width="28" height="28" />
+      <span>JUDY</span>
+    </a>
+    <nav class="links">
+      <a href="#features">特性</a>
+      <a href="#quickstart">快速开始</a>
+      <a href="#open">开源</a>
+      <a href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <img class="hero-logo" src="logo.png" alt="JUDY" width="104" height="104" />
+      <h1>JUDY</h1>
+      <p class="tagline">一切皆插件的 Agent Harness</p>
+      <p class="sub">
+        每个能力都是一个插件，每个会话都可以组装成你专属的智能体。<br />
+        工具、提示词、身份、界面——都由你来定义。
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#quickstart">快速开始</a>
+        <a class="btn ghost" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="features">
+      <h2>为什么选择 JUDY</h2>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🧩</div>
+          <h3>一切皆插件</h3>
+          <p>每个能力都是组合里的一行插件：工具、服务、界面、预设。增删能力，就是增删一行组合。</p>
+        </article>
+        <article class="card">
+          <div class="icon">🤖</div>
+          <h3>专属 Agent 预设</h3>
+          <p>为不同角色创建独立 Agent：各自的工具集、提示词与身份。新建会话，即选即用。</p>
+        </article>
+        <article class="card">
+          <div class="icon">✨</div>
+          <h3>创造模式</h3>
+          <p>Agent 可以检查运行时、实验插件，甚至为你创作全新的 Agent 预设——让 Agent 创造 Agent。</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎨</div>
+          <h3>深度可定制</h3>
+          <p>品牌名、主题色、Logo、界面元素，从内到外都能换成你自己的，做出独一无二的版本。</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔀</div>
+          <h3>子代理与工作流</h3>
+          <p>并行委托、多阶段编排，复杂任务拆给多个 Agent 协作完成，各司其职。</p>
+        </article>
+        <article class="card">
+          <div class="icon">🛡️</div>
+          <h3>本地优先</h3>
+          <p>会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Quick start -->
+    <section id="quickstart" class="quickstart">
+      <h2>快速开始</h2>
+      <p class="lead">从源码运行 JUDY，几分钟内打开你的第一个 Agent 会话：</p>
+      <pre><code>git clone https://github.com/robin202208/JUDY-harness.git
+cd JUDY-harness
+pnpm install
+pnpm run build
+pnpm dsh web
+
+# 浏览器打开 http://127.0.0.1:3080</code></pre>
+      <p class="hint">需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。</p>
+    </section>
+
+    <!-- Open source -->
+    <section id="open" class="open">
+      <h2>开源，开放，可组合</h2>
+      <p>
+        JUDY 基于 MIT 许可开源，构建于插件化架构之上。你可以自由修改、定制并部署自己的版本。
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">在 GitHub 上查看源码 ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="inner">
+      <span>© 2026 JUDY · MIT License</span>
+      <a href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </footer>
+</body>
+</html>
