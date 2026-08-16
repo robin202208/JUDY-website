@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>JUDY — 一切皆插件的 Agent Harness</title>
-  <meta name="description" content="JUDY：基于插件架构的智能体平台。一切皆插件，每个会话都可以组装成你专属的 Agent。" />
+  <title id="pageTitle">JUDY — 一切皆插件的 Agent Harness</title>
+  <meta name="description" id="pageDesc" content="JUDY：基于插件架构的智能体平台。一切皆插件，每个会话都可以组装成你专属的 Agent。" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -15,10 +15,11 @@
       <span>JUDY</span>
     </a>
     <nav class="links">
-      <a href="#features">特性</a>
-      <a href="#quickstart">快速开始</a>
-      <a href="#open">开源</a>
+      <a href="#features" data-i18n="nav.features">特性</a>
+      <a href="#quickstart" data-i18n="nav.quickstart">快速开始</a>
+      <a href="#open" data-i18n="nav.open">开源</a>
       <a href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub ↗</a>
+      <button class="lang-switch" id="langSwitch" type="button">EN</button>
     </nav>
   </header>
 
@@ -27,76 +28,76 @@
     <section class="hero">
       <img class="hero-logo" src="logo.png" alt="JUDY" width="104" height="104" />
       <h1>JUDY</h1>
-      <p class="tagline">一切皆插件的 Agent Harness</p>
-      <p class="sub">
+      <p class="tagline" data-i18n="hero.tagline">一切皆插件的 Agent Harness</p>
+      <p class="sub" data-i18n="hero.sub">
         每个能力都是一个插件，每个会话都可以组装成你专属的智能体。<br />
         工具、提示词、身份、界面——都由你来定义。
       </p>
       <div class="cta">
-        <a class="btn primary" href="#quickstart">快速开始</a>
-        <a class="btn ghost" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn primary" href="#quickstart" data-i18n="hero.cta1">快速开始</a>
+        <a class="btn ghost" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener" data-i18n="hero.cta2">GitHub ↗</a>
       </div>
     </section>
 
     <!-- Features -->
     <section id="features" class="features">
-      <h2>为什么选择 JUDY</h2>
+      <h2 data-i18n="feat.heading">为什么选择 JUDY</h2>
       <div class="grid">
         <article class="card">
           <div class="icon">🧩</div>
-          <h3>一切皆插件</h3>
-          <p>每个能力都是组合里的一行插件：工具、服务、界面、预设。增删能力，就是增删一行组合。</p>
+          <h3 data-i18n="feat.1.title">一切皆插件</h3>
+          <p data-i18n="feat.1.desc">每个能力都是组合里的一行插件：工具、服务、界面、预设。增删能力，就是增删一行组合。</p>
         </article>
         <article class="card">
           <div class="icon">🤖</div>
-          <h3>专属 Agent 预设</h3>
-          <p>为不同角色创建独立 Agent：各自的工具集、提示词与身份。新建会话，即选即用。</p>
+          <h3 data-i18n="feat.2.title">专属 Agent 预设</h3>
+          <p data-i18n="feat.2.desc">为不同角色创建独立 Agent：各自的工具集、提示词与身份。新建会话，即选即用。</p>
         </article>
         <article class="card">
           <div class="icon">✨</div>
-          <h3>创造模式</h3>
-          <p>Agent 可以检查运行时、实验插件，甚至为你创作全新的 Agent 预设——让 Agent 创造 Agent。</p>
+          <h3 data-i18n="feat.3.title">创造模式</h3>
+          <p data-i18n="feat.3.desc">Agent 可以检查运行时、实验插件，甚至为你创作全新的 Agent 预设——让 Agent 创造 Agent。</p>
         </article>
         <article class="card">
           <div class="icon">🎨</div>
-          <h3>深度可定制</h3>
-          <p>品牌名、主题色、Logo、界面元素，从内到外都能换成你自己的，做出独一无二的版本。</p>
+          <h3 data-i18n="feat.4.title">深度可定制</h3>
+          <p data-i18n="feat.4.desc">品牌名、主题色、Logo、界面元素，从内到外都能换成你自己的，做出独一无二的版本。</p>
         </article>
         <article class="card">
           <div class="icon">🔀</div>
-          <h3>子代理与工作流</h3>
-          <p>并行委托、多阶段编排，复杂任务拆给多个 Agent 协作完成，各司其职。</p>
+          <h3 data-i18n="feat.5.title">子代理与工作流</h3>
+          <p data-i18n="feat.5.desc">并行委托、多阶段编排，复杂任务拆给多个 Agent 协作完成，各司其职。</p>
         </article>
         <article class="card">
           <div class="icon">🛡️</div>
-          <h3>本地优先</h3>
-          <p>会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。</p>
+          <h3 data-i18n="feat.6.title">本地优先</h3>
+          <p data-i18n="feat.6.desc">会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。</p>
         </article>
       </div>
     </section>
 
     <!-- Quick start -->
     <section id="quickstart" class="quickstart">
-      <h2>快速开始</h2>
-      <p class="lead">从源码运行 JUDY，几分钟内打开你的第一个 Agent 会话：</p>
+      <h2 data-i18n="quick.heading">快速开始</h2>
+      <p class="lead" data-i18n="quick.lead">从源码运行 JUDY，几分钟内打开你的第一个 Agent 会话：</p>
       <pre><code>git clone https://github.com/robin202208/JUDY-harness.git
 cd JUDY-harness
 pnpm install
 pnpm run build
 pnpm dsh web
 
-# 浏览器打开 http://127.0.0.1:3080</code></pre>
-      <p class="hint">需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。</p>
+# http://127.0.0.1:3080</code></pre>
+      <p class="hint" data-i18n="quick.hint">需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。</p>
     </section>
 
     <!-- Open source -->
     <section id="open" class="open">
-      <h2>开源，开放，可组合</h2>
-      <p>
+      <h2 data-i18n="open.heading">开源，开放，可组合</h2>
+      <p data-i18n="open.text">
         JUDY 基于 MIT 许可开源，构建于插件化架构之上。你可以自由修改、定制并部署自己的版本。
       </p>
       <div class="cta">
-        <a class="btn primary" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">在 GitHub 上查看源码 ↗</a>
+        <a class="btn primary" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener" data-i18n="open.cta">在 GitHub 上查看源码 ↗</a>
       </div>
     </section>
   </main>
@@ -107,5 +108,99 @@ pnpm dsh web
       <a href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub</a>
     </div>
   </footer>
+
+  <script>
+    const I18N = {
+      zh: {
+        title: 'JUDY — 一切皆插件的 Agent Harness',
+        desc: 'JUDY：基于插件架构的智能体平台。一切皆插件，每个会话都可以组装成你专属的 Agent。',
+        lang: 'zh-CN',
+        switchLabel: 'EN',
+        'nav.features': '特性',
+        'nav.quickstart': '快速开始',
+        'nav.open': '开源',
+        'hero.tagline': '一切皆插件的 Agent Harness',
+        'hero.sub': '每个能力都是一个插件，每个会话都可以组装成你专属的智能体。\n工具、提示词、身份、界面——都由你来定义。',
+        'hero.cta1': '快速开始',
+        'hero.cta2': 'GitHub ↗',
+        'feat.heading': '为什么选择 JUDY',
+        'feat.1.title': '一切皆插件',
+        'feat.1.desc': '每个能力都是组合里的一行插件：工具、服务、界面、预设。增删能力，就是增删一行组合。',
+        'feat.2.title': '专属 Agent 预设',
+        'feat.2.desc': '为不同角色创建独立 Agent：各自的工具集、提示词与身份。新建会话，即选即用。',
+        'feat.3.title': '创造模式',
+        'feat.3.desc': 'Agent 可以检查运行时、实验插件，甚至为你创作全新的 Agent 预设——让 Agent 创造 Agent。',
+        'feat.4.title': '深度可定制',
+        'feat.4.desc': '品牌名、主题色、Logo、界面元素，从内到外都能换成你自己的，做出独一无二的版本。',
+        'feat.5.title': '子代理与工作流',
+        'feat.5.desc': '并行委托、多阶段编排，复杂任务拆给多个 Agent 协作完成，各司其职。',
+        'feat.6.title': '本地优先',
+        'feat.6.desc': '会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。',
+        'quick.heading': '快速开始',
+        'quick.lead': '从源码运行 JUDY，几分钟内打开你的第一个 Agent 会话：',
+        'quick.hint': '需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。',
+        'open.heading': '开源，开放，可组合',
+        'open.text': 'JUDY 基于 MIT 许可开源，构建于插件化架构之上。你可以自由修改、定制并部署自己的版本。',
+        'open.cta': '在 GitHub 上查看源码 ↗',
+      },
+      en: {
+        title: 'JUDY — The Agent Harness Where Everything Is a Plugin',
+        desc: 'JUDY: a plugin-based agent harness. Everything is a plugin — assemble your own agent for every session.',
+        lang: 'en',
+        switchLabel: '中文',
+        'nav.features': 'Features',
+        'nav.quickstart': 'Quick Start',
+        'nav.open': 'Open Source',
+        'hero.tagline': 'The Agent Harness Where Everything Is a Plugin',
+        'hero.sub': 'Every capability is a plugin, and every session can be assembled into\nyour own agent. Tools, prompts, personas, UI — all yours to define.',
+        'hero.cta1': 'Get Started',
+        'hero.cta2': 'GitHub ↗',
+        'feat.heading': 'Why JUDY',
+        'feat.1.title': 'Everything Is a Plugin',
+        'feat.1.desc': 'Every capability is one plugin row in the composition: tools, services, UI, presets. Adding or removing a capability means editing one row.',
+        'feat.2.title': 'Your Own Agent Presets',
+        'feat.2.desc': 'Create dedicated agents for different roles, each with its own tools, prompts, and persona. Pick one when starting a session.',
+        'feat.3.title': 'Creator Mode',
+        'feat.3.desc': 'The agent can inspect the runtime, experiment with plugins, and even author brand-new agent presets — agents creating agents.',
+        'feat.4.title': 'Deeply Customizable',
+        'feat.4.desc': 'Brand name, theme colors, logo, UI elements — everything can become yours, inside and out, for a one-of-a-kind build.',
+        'feat.5.title': 'Subagents & Workflows',
+        'feat.5.desc': 'Parallel delegation and multi-stage orchestration — split complex tasks across agents that each play their part.',
+        'feat.6.title': 'Local-First',
+        'feat.6.desc': 'Sessions, settings, and data live on your machine: private, offline-capable, and yours alone.',
+        'quick.heading': 'Quick Start',
+        'quick.lead': 'Run JUDY from source and open your first agent session in minutes:',
+        'quick.hint': 'Requires Node.js ≥ 22.19 and pnpm. After launching, pick or create your own agent preset in the UI.',
+        'open.heading': 'Open Source, Open, Composable',
+        'open.text': 'JUDY is MIT-licensed and built on a plugin architecture. Fork it, customize it, and deploy your own version.',
+        'open.cta': 'View Source on GitHub ↗',
+      },
+    }
+
+    const STORAGE_KEY = 'judy-lang'
+    const elements = [...document.querySelectorAll('[data-i18n]')]
+
+    function applyLang(lang) {
+      const dict = I18N[lang] || I18N.zh
+      document.documentElement.lang = dict.lang
+      document.getElementById('pageTitle').textContent = dict.title
+      document.getElementById('pageDesc').setAttribute('content', dict.desc)
+      for (const el of elements) {
+        el.textContent = dict[el.dataset.i18n] ?? el.textContent
+      }
+      document.getElementById('langSwitch').textContent = dict.switchLabel
+      localStorage.setItem(STORAGE_KEY, lang)
+    }
+
+    const initial = localStorage.getItem(STORAGE_KEY)
+      || (navigator.language && navigator.language.toLowerCase().startsWith('zh') ? 'zh' : 'en')
+
+    document.getElementById('langSwitch').addEventListener('click', () => {
+      const next = document.documentElement.lang === 'en' ? 'zh' : 'en'
+      applyLang(next)
+    })
+
+    applyLang(initial)
+  </script>
 </body>
 </html>
