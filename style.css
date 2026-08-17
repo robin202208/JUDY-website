@@ -204,6 +204,7 @@ section h2 {
 }
 .quickstart code { font-family: "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace; }
 .hint { text-align: center; color: var(--text-dim); font-size: 13px; margin-top: 18px; }
+.presets .lead { text-align: center; color: var(--text-dim); margin-top: 8px; }
 
 /* ── 开源 ─────────────────────────────── */
 .open { text-align: center; border-top: 1px solid var(--border); }

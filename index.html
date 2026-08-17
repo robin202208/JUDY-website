@@ -16,6 +16,7 @@
     </a>
     <nav class="links">
       <a href="#features" data-i18n="nav.features">特性</a>
+      <a href="#presets" data-i18n="nav.presets">行业预设</a>
       <a href="#quickstart" data-i18n="nav.quickstart">快速开始</a>
       <a href="#open" data-i18n="nav.open">开源</a>
       <a href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener">GitHub ↗</a>
@@ -76,6 +77,55 @@
       </div>
     </section>
 
+    <!-- Industry presets -->
+    <section id="presets" class="presets">
+      <h2 data-i18n="presets.heading">开箱即用的行业预设</h2>
+      <p class="lead" data-i18n="presets.lead">一行命令安装 8 个行业 Agent，覆盖运维、客服、数据分析、教学、审查与 IM 接入。</p>
+      <div class="grid">
+        <article class="card">
+          <div class="icon">🔧</div>
+          <h3 data-i18n="presets.1.name">维护工程师</h3>
+          <p data-i18n="presets.1.desc">系统与代码维护</p>
+        </article>
+        <article class="card">
+          <div class="icon">📄</div>
+          <h3 data-i18n="presets.2.name">PDF 阅读器</h3>
+          <p data-i18n="presets.2.desc">提取 PDF 文本内容</p>
+        </article>
+        <article class="card">
+          <div class="icon">🛡️</div>
+          <h3 data-i18n="presets.3.name">企业风控专家</h3>
+          <p data-i18n="presets.3.desc">反欺诈与合规风控</p>
+        </article>
+        <article class="card">
+          <div class="icon">💬</div>
+          <h3 data-i18n="presets.4.name">客服助手</h3>
+          <p data-i18n="presets.4.desc">工单处理与客户沟通</p>
+        </article>
+        <article class="card">
+          <div class="icon">📊</div>
+          <h3 data-i18n="presets.5.name">数据分析师</h3>
+          <p data-i18n="presets.5.desc">数据清洗与报告</p>
+        </article>
+        <article class="card">
+          <div class="icon">🎓</div>
+          <h3 data-i18n="presets.6.name">教学辅导</h3>
+          <p data-i18n="presets.6.desc">讲解、出题与讲评</p>
+        </article>
+        <article class="card">
+          <div class="icon">🔍</div>
+          <h3 data-i18n="presets.7.name">代码审查</h3>
+          <p data-i18n="presets.7.desc">正确性/安全/性能审查</p>
+        </article>
+        <article class="card">
+          <div class="icon">📨</div>
+          <h3 data-i18n="presets.8.name">IM 接入</h3>
+          <p data-i18n="presets.8.desc">企业微信/钉钉消息推送</p>
+        </article>
+      </div>
+      <p class="hint" data-i18n="presets.hint">安装：bash presets/install.sh —— 安装后新建会话即可选用。</p>
+    </section>
+
     <!-- Quick start -->
     <section id="quickstart" class="quickstart">
       <h2 data-i18n="quick.heading">快速开始</h2>
@@ -122,6 +172,7 @@ pnpm install && pnpm run build && pnpm dsh web
         'nav.features': '特性',
         'nav.quickstart': '快速开始',
         'nav.open': '开源',
+        'nav.presets': '行业预设',
         'hero.tagline': '一切皆插件的 Agent Harness',
         'hero.sub': '每个能力都是一个插件，每个会话都可以组装成你专属的智能体。\n工具、提示词、身份、界面——都由你来定义。',
         'hero.cta1': '快速开始',
@@ -139,6 +190,25 @@ pnpm install && pnpm run build && pnpm dsh web
         'feat.5.desc': '并行委托、多阶段编排，复杂任务拆给多个 Agent 协作完成，各司其职。',
         'feat.6.title': '本地优先',
         'feat.6.desc': '会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。',
+        'presets.heading': '开箱即用的行业预设',
+        'presets.lead': '一行命令安装 8 个行业 Agent，覆盖运维、客服、数据分析、教学、审查与 IM 接入。',
+        'presets.1.name': '维护工程师',
+        'presets.1.desc': '系统与代码维护',
+        'presets.2.name': 'PDF 阅读器',
+        'presets.2.desc': '提取 PDF 文本内容',
+        'presets.3.name': '企业风控专家',
+        'presets.3.desc': '反欺诈与合规风控',
+        'presets.4.name': '客服助手',
+        'presets.4.desc': '工单处理与客户沟通',
+        'presets.5.name': '数据分析师',
+        'presets.5.desc': '数据清洗与报告',
+        'presets.6.name': '教学辅导',
+        'presets.6.desc': '讲解、出题与讲评',
+        'presets.7.name': '代码审查',
+        'presets.7.desc': '正确性/安全/性能审查',
+        'presets.8.name': 'IM 接入',
+        'presets.8.desc': '企业微信/钉钉消息推送',
+        'presets.hint': '安装：bash presets/install.sh —— 安装后新建会话即可选用。',
         'quick.heading': '快速开始',
         'quick.lead': '用 Docker 一键部署，或从源码运行：',
         'quick.hint': 'Docker 方式需要 Docker；源码方式需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。',
@@ -155,6 +225,7 @@ pnpm install && pnpm run build && pnpm dsh web
         'nav.features': 'Features',
         'nav.quickstart': 'Quick Start',
         'nav.open': 'Open Source',
+        'nav.presets': 'Presets',
         'hero.tagline': 'The Agent Harness Where Everything Is a Plugin',
         'hero.sub': 'Every capability is a plugin, and every session can be assembled into\nyour own agent. Tools, prompts, personas, UI — all yours to define.',
         'hero.cta1': 'Get Started',
@@ -172,6 +243,25 @@ pnpm install && pnpm run build && pnpm dsh web
         'feat.5.desc': 'Parallel delegation and multi-stage orchestration — split complex tasks across agents that each play their part.',
         'feat.6.title': 'Local-First',
         'feat.6.desc': 'Sessions, settings, and data live on your machine: private, offline-capable, and yours alone.',
+        'presets.heading': 'Industry Presets, Ready to Go',
+        'presets.lead': 'Install 8 industry agents with one command — ops, support, data, tutoring, review, and IM.',
+        'presets.1.name': 'Maintenance Engineer',
+        'presets.1.desc': 'System & code maintenance',
+        'presets.2.name': 'PDF Reader',
+        'presets.2.desc': 'Extract text from PDFs',
+        'presets.3.name': 'Risk Control Expert',
+        'presets.3.desc': 'Anti-fraud & compliance',
+        'presets.4.name': 'Customer Service',
+        'presets.4.desc': 'Tickets & customer communication',
+        'presets.5.name': 'Data Analyst',
+        'presets.5.desc': 'Data cleaning & reporting',
+        'presets.6.name': 'Tutor',
+        'presets.6.desc': 'Explain, quiz & review',
+        'presets.7.name': 'Code Reviewer',
+        'presets.7.desc': 'Correctness, security & performance',
+        'presets.8.name': 'IM Integration',
+        'presets.8.desc': 'WeChat Work & DingTalk alerts',
+        'presets.hint': 'Install with bash presets/install.sh — then pick one when starting a session.',
         'quick.heading': 'Quick Start',
         'quick.lead': 'Deploy with one click via Docker, or run from source:',
         'quick.hint': 'The Docker path needs Docker; the source path needs Node.js ≥ 22.19 and pnpm. After launching, pick or create your own agent preset in the UI.',
