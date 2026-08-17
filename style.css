@@ -208,6 +208,7 @@ section h2 {
 /* ── 开源 ─────────────────────────────── */
 .open { text-align: center; border-top: 1px solid var(--border); }
 .open p { max-width: 520px; margin: 8px auto 0; color: var(--text-dim); font-size: 15px; }
+.open .attribution { font-size: 12.5px; opacity: 0.75; margin-top: 14px; }
 
 /* ── 页脚 ─────────────────────────────── */
 .footer { border-top: 1px solid var(--border); }
