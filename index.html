@@ -79,15 +79,17 @@
     <!-- Quick start -->
     <section id="quickstart" class="quickstart">
       <h2 data-i18n="quick.heading">快速开始</h2>
-      <p class="lead" data-i18n="quick.lead">从源码运行 JUDY，几分钟内打开你的第一个 Agent 会话：</p>
-      <pre><code>git clone https://github.com/robin202208/JUDY-harness.git
+      <p class="lead" data-i18n="quick.lead">用 Docker 一键部署，或从源码运行：</p>
+      <pre><code># 方式一：Docker 一键部署（推荐，支持本地/国产模型）
+docker compose -f deploy/docker-compose.yml up -d --build
+
+# 方式二：从源码运行
+git clone https://github.com/robin202208/JUDY-harness.git
 cd JUDY-harness
-pnpm install
-pnpm run build
-pnpm dsh web
+pnpm install && pnpm run build && pnpm dsh web
 
 # http://127.0.0.1:3080</code></pre>
-      <p class="hint" data-i18n="quick.hint">需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。</p>
+      <p class="hint" data-i18n="quick.hint">Docker 方式需要 Docker；源码方式需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。</p>
     </section>
 
     <!-- Open source -->
@@ -138,8 +140,8 @@ pnpm dsh web
         'feat.6.title': '本地优先',
         'feat.6.desc': '会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。',
         'quick.heading': '快速开始',
-        'quick.lead': '从源码运行 JUDY，几分钟内打开你的第一个 Agent 会话：',
-        'quick.hint': '需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。',
+        'quick.lead': '用 Docker 一键部署，或从源码运行：',
+        'quick.hint': 'Docker 方式需要 Docker；源码方式需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。',
         'open.heading': '开源，开放，可组合',
         'open.text': 'JUDY 基于 MIT 许可开源，是 DeepSeek Harness（MIT）的二次开发分支。你可以自由修改、定制并部署自己的版本。',
         'open.attribution': '基于 DeepSeek Harness（MIT 协议）二次开发 · 保持开源，持续创新',
@@ -171,8 +173,8 @@ pnpm dsh web
         'feat.6.title': 'Local-First',
         'feat.6.desc': 'Sessions, settings, and data live on your machine: private, offline-capable, and yours alone.',
         'quick.heading': 'Quick Start',
-        'quick.lead': 'Run JUDY from source and open your first agent session in minutes:',
-        'quick.hint': 'Requires Node.js ≥ 22.19 and pnpm. After launching, pick or create your own agent preset in the UI.',
+        'quick.lead': 'Deploy with one click via Docker, or run from source:',
+        'quick.hint': 'The Docker path needs Docker; the source path needs Node.js ≥ 22.19 and pnpm. After launching, pick or create your own agent preset in the UI.',
         'open.heading': 'Open Source, Open, Composable',
         'open.text': 'JUDY is MIT-licensed and a derivative of DeepSeek Harness (MIT). Fork it, customize it, and deploy your own version.',
         'open.attribution': 'A derivative of DeepSeek Harness (MIT) · open, with continuous innovation',
