@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://robin202208.github.io/JUDY-website/sitemap.xml

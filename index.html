@@ -3,10 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title id="pageTitle">JUDY — 一切皆插件的 Agent Harness</title>
-  <meta name="description" id="pageDesc" content="JUDY：基于插件架构的智能体平台。一切皆插件，每个会话都可以组装成你专属的 Agent。" />
+  <title id="pageTitle">JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）</title>
+  <meta name="description" id="pageDesc" content="JUDY：基于插件架构的智能体 Agent 平台。一切皆插件，支持 Docker 一键私有化部署与本地/国产模型（Ollama、vLLM），每个会话都可以组装成你专属的 Agent。" />
+  <meta name="keywords" content="JUDY, Agent Harness, 智能体平台, Agent 平台, 插件架构, 私有化部署, 本地模型, Ollama, vLLM, Agent 预设, DeepSeek, 开源" />
+  <meta name="author" content="JUDY" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#8b5cf6" />
+  <link rel="canonical" href="https://robin202208.github.io/JUDY-website/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph / Twitter Card (双语内容由页面脚本同步切换) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="JUDY" />
+  <meta property="og:url" content="https://robin202208.github.io/JUDY-website/" />
+  <meta property="og:title" id="ogTitle" content="JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）" />
+  <meta property="og:description" id="ogDesc" content="基于插件架构的智能体 Agent 平台：Docker 一键私有化部署、支持本地/国产模型，工具、提示词、身份、界面都由你定义。" />
+  <meta property="og:image" content="https://robin202208.github.io/JUDY-website/assets/og-cover.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" id="ogLocale" content="zh_CN" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" id="twTitle" content="JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）" />
+  <meta name="twitter:description" id="twDesc" content="基于插件架构的智能体 Agent 平台：Docker 一键私有化部署、支持本地/国产模型，工具、提示词、身份、界面都由你定义。" />
+  <meta name="twitter:image" content="https://robin202208.github.io/JUDY-website/assets/og-cover.png" />
 </head>
 <body>
   <header class="nav">
@@ -16,6 +37,7 @@
     </a>
     <nav class="links">
       <a href="#features" data-i18n="nav.features">特性</a>
+      <a href="#shots" data-i18n="nav.shots">界面</a>
       <a href="#presets" data-i18n="nav.presets">行业预设</a>
       <a href="#quickstart" data-i18n="nav.quickstart">快速开始</a>
       <a href="#open" data-i18n="nav.open">开源</a>
@@ -37,6 +59,38 @@
       <div class="cta">
         <a class="btn primary" href="#quickstart" data-i18n="hero.cta1">快速开始</a>
         <a class="btn ghost" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener" data-i18n="hero.cta2">GitHub ↗</a>
+      </div>
+    </section>
+
+    <!-- Screenshots -->
+    <section id="shots" class="shots">
+      <h2 data-i18n="shots.heading">真实界面，所见即所得</h2>
+      <p class="lead" data-i18n="shots.lead">会话、预设、插件组合——一切都在浏览器里直接完成，本地优先，开箱即用。</p>
+      <div class="shot-grid">
+        <figure class="shot main">
+          <div class="frame">
+            <div class="frame-bar"><span></span><span></span><span></span></div>
+            <img src="assets/gui-chat.png" alt="JUDY 会话主界面" data-i18n-alt="shots.1.alt" loading="lazy" />
+            <div class="shot-missing" hidden><p data-i18n="shots.missing">截图待补充：请按 Cmd+Shift+4 截取会话界面后保存为 assets/gui-chat.png</p></div>
+          </div>
+          <figcaption data-i18n="shots.1.cap">会话主界面：与你的专属 Agent 对话</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame">
+            <div class="frame-bar"><span></span><span></span><span></span></div>
+            <img src="assets/gui-presets.png" alt="JUDY 预设选择" data-i18n-alt="shots.2.alt" loading="lazy" />
+            <div class="shot-missing" hidden><p data-i18n="shots.missing">截图待补充：请截取新建会话的预设选择界面后保存为 assets/gui-presets.png</p></div>
+          </div>
+          <figcaption data-i18n="shots.2.cap">预设选择：按角色组装你的 Agent</figcaption>
+        </figure>
+        <figure class="shot">
+          <div class="frame">
+            <div class="frame-bar"><span></span><span></span><span></span></div>
+            <img src="assets/gui-compose.png" alt="JUDY 插件组合" data-i18n-alt="shots.3.alt" loading="lazy" />
+            <div class="shot-missing" hidden><p data-i18n="shots.missing">截图待补充：请截取插件/组合配置界面后保存为 assets/gui-compose.png</p></div>
+          </div>
+          <figcaption data-i18n="shots.3.cap">插件组合：每个能力都是一行插件</figcaption>
+        </figure>
       </div>
     </section>
 
@@ -165,11 +219,12 @@ pnpm install && pnpm run build && pnpm dsh web
   <script>
     const I18N = {
       zh: {
-        title: 'JUDY — 一切皆插件的 Agent Harness',
-        desc: 'JUDY：基于插件架构的智能体平台。一切皆插件，每个会话都可以组装成你专属的 Agent。',
+        title: 'JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）',
+        desc: 'JUDY：基于插件架构的智能体 Agent 平台。一切皆插件，支持 Docker 一键私有化部署与本地/国产模型（Ollama、vLLM），每个会话都可以组装成你专属的 Agent。',
         lang: 'zh-CN',
         switchLabel: 'EN',
         'nav.features': '特性',
+        'nav.shots': '界面',
         'nav.quickstart': '快速开始',
         'nav.open': '开源',
         'nav.presets': '行业预设',
@@ -190,6 +245,15 @@ pnpm install && pnpm run build && pnpm dsh web
         'feat.5.desc': '并行委托、多阶段编排，复杂任务拆给多个 Agent 协作完成，各司其职。',
         'feat.6.title': '本地优先',
         'feat.6.desc': '会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。',
+        'shots.heading': '真实界面，所见即所得',
+        'shots.lead': '会话、预设、插件组合——一切都在浏览器里直接完成，本地优先，开箱即用。',
+        'shots.1.alt': 'JUDY 会话主界面',
+        'shots.1.cap': '会话主界面：与你的专属 Agent 对话',
+        'shots.2.alt': 'JUDY 预设选择',
+        'shots.2.cap': '预设选择：按角色组装你的 Agent',
+        'shots.3.alt': 'JUDY 插件组合',
+        'shots.3.cap': '插件组合：每个能力都是一行插件',
+        'shots.missing': '截图待补充',
         'presets.heading': '开箱即用的行业预设',
         'presets.lead': '一行命令安装 8 个行业 Agent，覆盖运维、客服、数据分析、教学、审查与 IM 接入。',
         'presets.1.name': '维护工程师',
@@ -218,11 +282,12 @@ pnpm install && pnpm run build && pnpm dsh web
         'open.cta': '在 GitHub 上查看源码 ↗',
       },
       en: {
-        title: 'JUDY — The Agent Harness Where Everything Is a Plugin',
-        desc: 'JUDY: a plugin-based agent harness. Everything is a plugin — assemble your own agent for every session.',
+        title: 'JUDY — The Agent Harness Where Everything Is a Plugin (Private Deployment / Local Models)',
+        desc: 'JUDY: a plugin-based agent harness. One-click private deployment via Docker, local & domestic models (Ollama, vLLM) supported — assemble your own agent for every session.',
         lang: 'en',
         switchLabel: '中文',
         'nav.features': 'Features',
+        'nav.shots': 'Screens',
         'nav.quickstart': 'Quick Start',
         'nav.open': 'Open Source',
         'nav.presets': 'Presets',
@@ -243,6 +308,15 @@ pnpm install && pnpm run build && pnpm dsh web
         'feat.5.desc': 'Parallel delegation and multi-stage orchestration — split complex tasks across agents that each play their part.',
         'feat.6.title': 'Local-First',
         'feat.6.desc': 'Sessions, settings, and data live on your machine: private, offline-capable, and yours alone.',
+        'shots.heading': 'The Real Interface, Ready to Use',
+        'shots.lead': 'Chat, presets, and plugin composition — all in your browser, local-first, ready to go.',
+        'shots.1.alt': 'JUDY chat interface',
+        'shots.1.cap': 'Chat: talk to your own agent',
+        'shots.2.alt': 'JUDY preset picker',
+        'shots.2.cap': 'Presets: assemble an agent per role',
+        'shots.3.alt': 'JUDY plugin composition',
+        'shots.3.cap': 'Composition: every capability is one plugin row',
+        'shots.missing': 'Screenshot coming soon',
         'presets.heading': 'Industry Presets, Ready to Go',
         'presets.lead': 'Install 8 industry agents with one command — ops, support, data, tutoring, review, and IM.',
         'presets.1.name': 'Maintenance Engineer',
@@ -280,8 +354,16 @@ pnpm install && pnpm run build && pnpm dsh web
       document.documentElement.lang = dict.lang
       document.getElementById('pageTitle').textContent = dict.title
       document.getElementById('pageDesc').setAttribute('content', dict.desc)
+      document.getElementById('ogTitle').setAttribute('content', dict.title)
+      document.getElementById('ogDesc').setAttribute('content', dict.desc)
+      document.getElementById('twTitle').setAttribute('content', dict.title)
+      document.getElementById('twDesc').setAttribute('content', dict.desc)
+      document.getElementById('ogLocale').setAttribute('content', lang === 'en' ? 'en_US' : 'zh_CN')
       for (const el of elements) {
         el.textContent = dict[el.dataset.i18n] ?? el.textContent
+      }
+      for (const el of document.querySelectorAll('[data-i18n-alt]')) {
+        el.setAttribute('alt', dict[el.dataset.i18nAlt] ?? el.getAttribute('alt'))
       }
       document.getElementById('langSwitch').textContent = dict.switchLabel
       localStorage.setItem(STORAGE_KEY, lang)
@@ -296,6 +378,17 @@ pnpm install && pnpm run build && pnpm dsh web
     })
 
     applyLang(initial)
+
+    // 截图未就位时显示占位卡片；图片就位后自动切换为真实截图
+    for (const img of document.querySelectorAll('.shot .frame img')) {
+      const missing = img.parentElement.querySelector('.shot-missing')
+      if (!missing) continue
+      const show = () => { img.hidden = true; missing.hidden = false }
+      const hide = () => { img.hidden = false; missing.hidden = true }
+      img.addEventListener('error', show)
+      img.addEventListener('load', hide)
+      if (img.complete && img.naturalWidth === 0) show()
+    }
   </script>
 </body>
 </html>
