@@ -226,6 +226,7 @@ section h2 {
 .frame-bar span:nth-child(2) { background: #fbbf24; }
 .frame-bar span:nth-child(3) { background: #34d399; }
 .frame img { display: block; width: 100%; height: auto; }
+.frame img[hidden] { display: none; }
 .shot-missing {
   aspect-ratio: 16 / 9;
   display: flex;
@@ -240,6 +241,7 @@ section h2 {
   font-size: 13.5px;
   line-height: 1.6;
 }
+.shot-missing[hidden] { display: none; }
 .shot figcaption {
   text-align: center;
   color: var(--text-dim);
