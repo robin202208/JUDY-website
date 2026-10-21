@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>开始使用 · JUDY</title>
+<meta name="description" content="JUDY 上手页：四件事复制一句话粘进工作台就能做——读文件、整理表格、起草回复、检查文字。" />
+<meta name="theme-color" content="#8b5cf6" />
+<link rel="canonical" href="https://www.judy.run/start/" />
+<link rel="icon" type="image/png" href="mark.png" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="JUDY" />
+<meta property="og:url" content="https://www.judy.run/start/" />
+<meta property="og:title" content="开始使用 · JUDY" />
+<meta property="og:description" content="四件事，复制一句话粘进工作台就能做。" />
+<meta property="og:image" content="https://www.judy.run/assets/og-cover.png" />
+<script>
+  /*
+   * 工作台地址：填你们公网可访问的实例，例如 https://app.judy.run/
+   * 留空则页面只显示「申请试用」，不出现死链。
+   */
+  window.JUDY_START = {
+    appUrl: '',
+    contactMail: 'hello@judy.run',
+  }
+</script>
+<style>
+  :root {
+    --ink:#0b0d10; --muted:#6b7280; --line:#e5e7eb; --surface:#f6f7f9;
+    --accent:#8b5cf6; --accent-soft:#f3efff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+    color: var(--ink); background: #fff; line-height: 1.65; -webkit-font-smoothing: antialiased;
+  }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 22px; }
+
+  header { border-bottom: 1px solid var(--line); }
+  .nav { display: flex; align-items: center; gap: 10px; height: 64px; font-weight: 700; }
+  .nav img { width: 26px; height: 26px; }
+  .nav .back { margin-left: auto; font-size: 14px; font-weight: 500; color: var(--muted); }
+  .nav .back:hover { color: var(--ink); }
+
+  .hero { padding: 52px 0 10px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600;
+    color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 6px 12px;
+  }
+  .eyebrow i { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  h1 { font-size: clamp(28px, 5.2vw, 40px); line-height: 1.28; letter-spacing: -.015em; margin: 18px 0 14px; }
+  .lead { color: #374151; font-size: 16.5px; max-width: 620px; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 0; }
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+    height: 48px; padding: 0 22px; border-radius: 11px; font-size: 16px; font-weight: 650;
+    border: 1px solid var(--ink); background: var(--ink); color: #fff; cursor: pointer;
+    transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 22px rgba(11,13,16,.16); }
+  .btn-ghost { background: #fff; color: var(--ink); border-color: var(--line); }
+  .btn-ghost:hover { background: var(--surface); border-color: #d1d5db; }
+
+  h2 { font-size: 19px; margin: 44px 0 14px; }
+  .cards { display: grid; gap: 12px; }
+  .task { border: 1px solid var(--line); border-radius: 14px; padding: 18px; background: #fff; }
+  .task h3 { font-size: 16.5px; margin-bottom: 4px; }
+  .task p { font-size: 14.5px; color: var(--muted); }
+  .prompt {
+    margin: 12px 0; padding: 12px 14px; border-radius: 10px; background: var(--surface);
+    border: 1px solid #eceef2; font-size: 14px; color: #1f2937;
+  }
+  .copy {
+    height: 38px; padding: 0 16px; border-radius: 9px; font-size: 14.5px; font-weight: 600;
+    background: #fff; border: 1px solid var(--line); cursor: pointer; color: var(--ink);
+  }
+  .copy:hover { background: var(--surface); }
+  .copy.done { background: #f0fdf4; border-color: #bbf7d0; color: #166534; }
+
+  .rules { margin: 42px 0 0; border-top: 1px solid var(--line); padding-top: 22px; }
+  .rules ul { list-style: none; display: grid; gap: 10px; }
+  .rules li { display: flex; gap: 10px; font-size: 14.5px; color: #374151; }
+  .rules b { flex: 0 0 auto; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); margin-top: 8px; }
+
+  footer { margin: 44px 0 52px; font-size: 13.5px; color: var(--muted); }
+  footer a { color: var(--accent); }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 28px; transform: translate(-50%, 16px);
+    background: var(--ink); color: #fff; font-size: 14px; padding: 10px 18px; border-radius: 10px;
+    opacity: 0; pointer-events: none; transition: opacity .18s ease, transform .18s ease;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); }
+  @media (max-width: 520px) { .cta .btn { width: 100%; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <img src="mark.png" alt="JUDY" />
+    <span>JUDY</span>
+    <a class="back" href="../">返回首页</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <span class="eyebrow"><i></i>上手页 · 3 分钟</span>
+    <h1>不用学怎么提问，<br />四件事复制一句话就行</h1>
+    <p class="lead">
+      下面是四件最常见的活。把任意一段话复制到 JUDY 工作台的输入框里，按回车，就能得到结果。
+      想把 JUDY 部署到你们自己的服务器上，可以看<a href="../#quickstart" style="color:var(--accent)">部署方式</a>。
+    </p>
+    <div class="cta">
+      <a class="btn btn-ghost" data-app href="#" hidden>进入工作台</a>
+      <a class="btn" data-apply href="mailto:hello@judy.run">申请试用</a>
+      <a class="btn btn-ghost" href="../#features">它还能做什么</a>
+    </div>
+  </div>
+
+  <h2>四件可以立刻试的事</h2>
+  <div class="cards">
+    <div class="task">
+      <h3>1 · 这份文件到底讲了什么</h3>
+      <p>上传 PDF 或 Word，让它说人话。</p>
+      <div class="prompt" data-prompt="请读这份文件，用 5 句话说明它讲了什么，再列出 3 个需要我注意的地方。不要复述原文。">请读这份文件，用 5 句话说明它讲了什么，再列出 3 个需要我注意的地方。不要复述原文。</div>
+      <button class="copy" type="button">复制这句话</button>
+    </div>
+
+    <div class="task">
+      <h3>2 · 把一堆文字变成表格</h3>
+      <p>把聊天记录、清单、报价贴进去，让它整理成表。</p>
+      <div class="prompt" data-prompt="把下面这些内容整理成一张表格，列名你定。缺失的信息写“不确定”，不要编。内容：">把下面这些内容整理成一张表格，列名你定。缺失的信息写“不确定”，不要编。内容：</div>
+      <button class="copy" type="button">复制这句话</button>
+    </div>
+
+    <div class="task">
+      <h3>3 · 帮我回一条消息</h3>
+      <p>把客户的原话贴进去，让它起草回复。</p>
+      <div class="prompt" data-prompt="下面是一位客户的消息。帮我起草一条回复：先确认他的问题，再给下一步，语气礼貌、不啰嗦。原文：">下面是一位客户的消息。帮我起草一条回复：先确认他的问题，再给下一步，语气礼貌、不啰嗦。原文：</div>
+      <button class="copy" type="button">复制这句话</button>
+    </div>
+
+    <div class="task">
+      <h3>4 · 检查这段话有没有问题</h3>
+      <p>文案、合同条款、邮件，让它逐条挑错。</p>
+      <div class="prompt" data-prompt="检查下面这段文字：错别字、语句不通、前后矛盾的地方逐条列出，不要改写。原文：">检查下面这段文字：错别字、语句不通、前后矛盾的地方逐条列出，不要改写。原文：</div>
+      <button class="copy" type="button">复制这句话</button>
+    </div>
+  </div>
+
+  <div class="rules">
+    <h2 style="margin-top:0">用之前要知道的三件事</h2>
+    <ul>
+      <li><b></b><span>它会出错。数字、金额、条款这类要签字的内容，自己再核一遍。</span></li>
+      <li><b></b><span>私有化部署时，会话与文件保存在你们自己的机器上，不经过我们的服务器。</span></li>
+      <li><b></b><span>卡住了就刷新页面重来一次，不要反复点发送。</span></li>
+    </ul>
+  </div>
+
+  <footer>
+    JUDY · 基于 DeepSeek Harness（MIT）二次开发 ·
+    <a href="../">judy.run</a>
+  </footer>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+  (function () {
+    var config = window.JUDY_START || {}
+    var toast = document.getElementById('toast')
+    var timer
+
+    function flash(message) {
+      toast.textContent = message
+      toast.classList.add('show')
+      clearTimeout(timer)
+      timer = setTimeout(function () { toast.classList.remove('show') }, 1600)
+    }
+
+    // 没有公网工作台时，「进入工作台」不出现，避免点进去是死链
+    if (config.appUrl) {
+      document.querySelectorAll('[data-app]').forEach(function (node) {
+        node.setAttribute('href', config.appUrl)
+        node.setAttribute('target', '_blank')
+        node.setAttribute('rel', 'noopener')
+        node.hidden = false
+        node.classList.remove('btn-ghost')
+        node.classList.add('btn')
+      })
+    }
+    if (config.contactMail) {
+      document.querySelectorAll('[data-apply]').forEach(function (node) {
+        node.setAttribute('href', 'mailto:' + config.contactMail)
+      })
+    }
+
+    function copyText(text) {
+      if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(text)
+      return new Promise(function (resolve, reject) {
+        var area = document.createElement('textarea')
+        area.value = text
+        area.setAttribute('readonly', '')
+        area.style.position = 'fixed'
+        area.style.top = '-1000px'
+        document.body.appendChild(area)
+        area.select()
+        var ok = false
+        try { ok = document.execCommand('copy') } catch (error) { ok = false }
+        document.body.removeChild(area)
+        ok ? resolve() : reject(new Error('copy failed'))
+      })
+    }
+
+    document.querySelectorAll('.task').forEach(function (task) {
+      var button = task.querySelector('.copy')
+      var prompt = task.querySelector('.prompt')
+      button.addEventListener('click', function () {
+        copyText(prompt.dataset.prompt || prompt.textContent.trim())
+          .then(function () {
+            button.textContent = '已复制'
+            button.classList.add('done')
+            flash('已复制，粘到工作台里')
+            setTimeout(function () { button.textContent = '复制这句话'; button.classList.remove('done') }, 2000)
+          })
+          .catch(function () { flash('复制失败，请手动选中') })
+      })
+    })
+  })()
+</script>
+
+</body>
+</html>
