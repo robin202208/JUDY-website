@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title id="pageTitle">JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）</title>
-  <meta name="description" id="pageDesc" content="JUDY：基于插件架构的智能体 Agent 平台。一切皆插件，支持 Docker 一键私有化部署与本地/国产模型（Ollama、vLLM），每个会话都可以组装成你专属的 Agent。" />
+  <title id="pageTitle">JUDY — 改自己，才叫进化（Harness 平台 / 私有化部署）</title>
+  <meta name="description" id="pageDesc" content="JUDY：会说人话的 Harness 平台。不改模型，改模型外面那套系统——八个可编辑组件、两层递归、经验库与三个校验器，支持私有化部署与本地模型。" />
   <meta name="keywords" content="JUDY, Agent Harness, 智能体平台, Agent 平台, 插件架构, 私有化部署, 本地模型, Ollama, vLLM, Agent 预设, DeepSeek, 开源" />
   <meta name="author" content="JUDY" />
   <meta name="robots" content="index, follow" />
@@ -36,6 +36,7 @@
       <span>JUDY</span>
     </a>
     <nav class="links">
+      <a href="#harness" data-i18n="nav.harness">Harness 优势</a>
       <a href="#features" data-i18n="nav.features">特性</a>
       <a href="#shots" data-i18n="nav.shots">界面</a>
       <a href="#presets" data-i18n="nav.presets">行业预设</a>
@@ -60,6 +61,78 @@
         <a class="btn primary" href="#quickstart" data-i18n="hero.cta1">快速开始</a>
         <a class="btn ghost" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener" data-i18n="hero.cta2">GitHub ↗</a>
       </div>
+    </section>
+
+
+    <!-- Harness advantage -->
+    <section id="harness" class="harness">
+      <p class="eyebrow" data-i18n="adv.eyebrow">HARNESS, NOT PROMPTS</p>
+      <h2 data-i18n="adv.heading">别人改提示词，我们改 Harness</h2>
+      <p class="lead" data-i18n="adv.lead">
+        模型权重不动，被优化的对象是模型外面那套系统：系统提示、护栏、记忆、工具指引、技能、子代理、脚本、插件。
+        这八个组件才是大多数 agent 失败的真正原因——而我们把它当成可被反复改写的对象。
+      </p>
+
+      <div class="adv-grid">
+        <article class="adv">
+          <span class="adv-no">01</span>
+          <h3 data-i18n="adv.1.title">任务层 × 跨任务层：两层递归</h3>
+          <p data-i18n="adv.1.desc">
+            每个任务先提案、再用真实执行对比、最后合成一份；被采纳的改法连同完整组件树写进同域经验库。
+            下一个任务先读经验，不必从零开始。
+          </p>
+        </article>
+        <article class="adv">
+          <span class="adv-no">02</span>
+          <h3 data-i18n="adv.2.title">工作方式与行业口径，分开改</h3>
+          <p data-i18n="adv.2.desc">
+            INV 只改“换个专业照样成立”的部分（流程、脚本、兜底），DOM 只改“这行人才知道”的口径与坑。
+            分开提案再合成——这是消融里贡献最大的一项。
+          </p>
+        </article>
+        <article class="adv">
+          <span class="adv-no">03</span>
+          <h3 data-i18n="adv.3.title">没有标准答案，也能判断改对了</h3>
+          <p data-i18n="adv.3.desc">
+            靠同一任务的多次执行对比：分叉（同一步做了不同选择）、重复失败（每次都在同一处错）、未发生的风险。
+            选择器挑交付物，评分结果永不回流给改进者。
+          </p>
+        </article>
+        <article class="adv">
+          <span class="adv-no">04</span>
+          <h3 data-i18n="adv.4.title">沉淀的是完整组件树，不是总结</h3>
+          <p data-i18n="adv.4.desc">
+            经验库存的是可执行的整棵树，配一份四字段说明：cue（什么时候翻这条）、lesson（该怎么做）、
+            evidence（哪次执行证明了它）、confidence（能不能推翻）。
+          </p>
+        </article>
+        <article class="adv">
+          <span class="adv-no">05</span>
+          <h3 data-i18n="adv.5.title">把“静默失效”变成报错原文</h3>
+          <p data-i18n="adv.5.desc">
+            技能没在常驻文本里被点名、脚本编译不过、常驻提示超预算——这三类错误在多数框架里不报错，
+            只是悄悄不生效。我们把它们拦在写入之前。
+          </p>
+        </article>
+        <article class="adv adv-cta">
+          <h3 data-i18n="adv.6.title">怎么验证我们没有吹</h3>
+          <p data-i18n="adv.6.desc">
+            论文数字来自公开表格，我们只做算术复算；我们自己的效果以小规模 k=1 验证为准，
+            未验证的项不会写进对客材料。
+          </p>
+          <a class="btn ghost small" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener" data-i18n="adv.6.cta">看看我们怎么做的 ↗</a>
+        </article>
+      </div>
+
+      <div class="adv-evidence">
+        <div class="ev"><b>−5.3</b><span data-i18n="adv.ev1">去掉技能资产后的分数损失</span></div>
+        <div class="ev"><b>−3.7</b><span data-i18n="adv.ev2">去掉脚本资产后的分数损失</span></div>
+        <div class="ev"><b>−1.5</b><span data-i18n="adv.ev3">只把提示词写好，收益是最小的</span></div>
+        <div class="ev"><b>+11.5</b><span data-i18n="adv.ev4">同一方法在较弱执行器上的最大提升</span></div>
+      </div>
+      <p class="hint" data-i18n="adv.source">
+        数字出自 Google Research《Recursive Agent Harnessing for an Open World》(arXiv:2610.14224) 的公开表格（WorkBuddy 均分，k=5 组件消融与 k=1 主表），我们仅做算术复算。
+      </p>
     </section>
 
     <!-- Screenshots -->
@@ -223,13 +296,35 @@ pnpm install && pnpm run build && pnpm dsh web
         desc: 'JUDY：基于插件架构的智能体 Agent 平台。一切皆插件，支持 Docker 一键私有化部署与本地/国产模型（Ollama、vLLM），每个会话都可以组装成你专属的 Agent。',
         lang: 'zh-CN',
         switchLabel: 'EN',
+        'nav.harness': 'Harness 优势',
+        'adv.eyebrow': 'HARNESS, NOT PROMPTS',
+        'adv.heading': '别人改提示词，我们改 Harness',
+        'adv.lead': '模型权重不动，被优化的对象是模型外面那套系统：系统提示、护栏、记忆、工具指引、技能、子代理、脚本、插件。这八个组件才是大多数 agent 失败的真正原因——而我们把它当成可被反复改写的对象。',
+        'adv.1.title': '任务层 × 跨任务层：两层递归',
+        'adv.1.desc': '每个任务先提案、再用真实执行对比、最后合成一份；被采纳的改法连同完整组件树写进同域经验库。下一个任务先读经验，不必从零开始。',
+        'adv.2.title': '工作方式与行业口径，分开改',
+        'adv.2.desc': 'INV 只改“换个专业照样成立”的部分（流程、脚本、兜底），DOM 只改“这行人才知道”的口径与坑。分开提案再合成——这是消融里贡献最大的一项。',
+        'adv.3.title': '没有标准答案，也能判断改对了',
+        'adv.3.desc': '靠同一任务的多次执行对比：分叉（同一步做了不同选择）、重复失败（每次都在同一处错）、未发生的风险。选择器挑交付物，评分结果永不回流给改进者。',
+        'adv.4.title': '沉淀的是完整组件树，不是总结',
+        'adv.4.desc': '经验库存的是可执行的整棵树，配一份四字段说明：cue（什么时候翻这条）、lesson（该怎么做）、evidence（哪次执行证明了它）、confidence（能不能推翻）。',
+        'adv.5.title': '把“静默失效”变成报错原文',
+        'adv.5.desc': '技能没在常驻文本里被点名、脚本编译不过、常驻提示超预算——这三类错误在多数框架里不报错，只是悄悄不生效。我们把它们拦在写入之前。',
+        'adv.6.title': '怎么验证我们没有吹',
+        'adv.6.desc': '论文数字来自公开表格，我们只做算术复算；我们自己的效果以小规模 k=1 验证为准，未验证的项不会写进对客材料。',
+        'adv.6.cta': '看看我们怎么做的 ↗',
+        'adv.ev1': '去掉技能资产后的分数损失',
+        'adv.ev2': '去掉脚本资产后的分数损失',
+        'adv.ev3': '只把提示词写好，收益是最小的',
+        'adv.ev4': '同一方法在较弱执行器上的最大提升',
+        'adv.source': '数字出自 Google Research《Recursive Agent Harnessing for an Open World》(arXiv:2610.14224) 的公开表格（WorkBuddy 均分，k=5 组件消融与 k=1 主表），我们仅做算术复算。',
         'nav.features': '特性',
         'nav.shots': '界面',
         'nav.quickstart': '快速开始',
         'nav.open': '开源',
         'nav.presets': '行业预设',
-        'hero.tagline': '一切皆插件的 Agent Harness',
-        'hero.sub': '每个能力都是一个插件，每个会话都可以组装成你专属的智能体。\n工具、提示词、身份、界面——都由你来定义。',
+        'hero.tagline': '改自己，才叫进化',
+        'hero.sub': '不改模型，改模型外面那套系统——八个可编辑组件、两层递归、经验库与三个校验器。\n每个会话都能组装成你专属的智能体。',
         'hero.cta1': '快速开始',
         'hero.cta2': 'GitHub ↗',
         'feat.heading': '为什么选择 JUDY',
@@ -286,13 +381,35 @@ pnpm install && pnpm run build && pnpm dsh web
         desc: 'JUDY: a plugin-based agent harness. One-click private deployment via Docker, local & domestic models (Ollama, vLLM) supported — assemble your own agent for every session.',
         lang: 'en',
         switchLabel: '中文',
+        'nav.harness': 'Harness Advantage',
+        'adv.eyebrow': 'HARNESS, NOT PROMPTS',
+        'adv.heading': 'Others rewrite prompts. We rewrite the harness.',
+        'adv.lead': 'The model stays frozen; the thing under optimisation is everything around it: system prompt, guardrails, memory, tool guidance, skills, sub-agents, scripts, plugins. Those eight components are why most agents fail — and we treat them as something that can be rewritten again and again.',
+        'adv.1.title': 'Two levels of recursion: per task, across tasks',
+        'adv.1.desc': 'Each task proposes an edit, compares real executions, then composes one harness. Whatever gets adopted is stored with its full component tree in that domain\'s experience library, so the next task starts from experience instead of zero.',
+        'adv.2.title': 'Working method and domain knowledge, edited separately',
+        'adv.2.desc': 'INV only touches what still holds in a different profession (workflow, scripts, fallbacks); DOM only touches the conventions and traps a practitioner knows. Separated proposals, then composed — the single biggest contributor in the ablation.',
+        'adv.3.title': 'No ground truth, and still know it got better',
+        'adv.3.desc': 'Judgement comes from comparing repeated runs: divergence (the same step made different choices), repeated failure (the same mistake every time), latent risk (a hazard visible but not yet triggered). A selector picks the deliverable; scores never flow back to the editor.',
+        'adv.4.title': 'We store the full tree, not a summary',
+        'adv.4.desc': 'The library keeps an executable component tree plus four fields: cue (when to consult it), lesson (what to do), evidence (which run proved it), confidence (whether it can be overturned).',
+        'adv.5.title': 'Silent failure becomes an error message',
+        'adv.5.desc': 'A skill never named in the always-on text, a script that will not compile, an over-budget system prompt — most frameworks record none of these, they simply do not take effect. We stop them before they are written.',
+        'adv.6.title': 'How to check we are not overselling',
+        'adv.6.desc': 'Paper figures come from public tables and we only redo the arithmetic; our own results rest on small k=1 runs, and unverified claims never enter customer material.',
+        'adv.6.cta': 'See how we do it ↗',
+        'adv.ev1': 'Score lost when skill assets are removed',
+        'adv.ev2': 'Score lost when script assets are removed',
+        'adv.ev3': 'Better prompts alone move the least',
+        'adv.ev4': 'Largest gain of the same method on a weaker executor',
+        'adv.source': 'Figures from Google Research, “Recursive Agent Harnessing for an Open World” (arXiv:2610.14224): WorkBuddy mean, k=5 component ablation and the k=1 main table. Arithmetic re-checked by us only.',
         'nav.features': 'Features',
         'nav.shots': 'Screens',
         'nav.quickstart': 'Quick Start',
         'nav.open': 'Open Source',
         'nav.presets': 'Presets',
-        'hero.tagline': 'The Agent Harness Where Everything Is a Plugin',
-        'hero.sub': 'Every capability is a plugin, and every session can be assembled into\nyour own agent. Tools, prompts, personas, UI — all yours to define.',
+        'hero.tagline': 'Evolution Is Self-Rewriting',
+        'hero.sub': 'Rewrite the system around the model — eight editable components, two-level recursion,\nan experience library and three validators. Every session assembles into your own agent.',
         'hero.cta1': 'Get Started',
         'hero.cta2': 'GitHub ↗',
         'feat.heading': 'Why JUDY',
