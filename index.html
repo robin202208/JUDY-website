@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title id="pageTitle">JUDY — 改自己，才叫进化（Harness 平台 / 私有化部署）</title>
-  <meta name="description" id="pageDesc" content="JUDY：会说人话的 Harness 平台。不改模型，改模型外面那套系统——八个可编辑组件、两层递归、经验库与三个校验器，支持私有化部署与本地模型。" />
-  <meta name="keywords" content="JUDY, Agent Harness, 智能体平台, Agent 平台, 插件架构, 私有化部署, 本地模型, Ollama, vLLM, Agent 预设, DeepSeek, 开源" />
+  <title id="pageTitle">JUDY — 私有化部署的 AI 员工运营台</title>
+  <meta name="description" id="pageDesc" content="JUDY 是把 Agent Harness 做成可交付产品的私有化运营台：一客一实例、每个交付物都能回溯到具体的人和具体的时间，数据留在这台机器上。" />
+  <meta name="keywords" content="JUDY, AI 员工, 智能体运营台, 私有化部署, 交付证据链, Agent Harness, 插件架构, 本地模型, Agent 预设, DeepSeek, 开源" />
   <meta name="author" content="JUDY" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#8b5cf6" />
-  <link rel="canonical" href="https://robin202208.github.io/JUDY-website/" />
+  <link rel="canonical" href="https://www.judy.run/" />
   <link rel="icon" type="image/png" href="logo.png" />
   <link rel="stylesheet" href="style.css" />
 
   <!-- Open Graph / Twitter Card (双语内容由页面脚本同步切换) -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="JUDY" />
-  <meta property="og:url" content="https://robin202208.github.io/JUDY-website/" />
-  <meta property="og:title" id="ogTitle" content="JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）" />
+  <meta property="og:url" content="https://www.judy.run/" />
+  <meta property="og:title" id="ogTitle" content="JUDY — 私有化部署的 AI 员工运营台" />
   <meta property="og:description" id="ogDesc" content="基于插件架构的智能体 Agent 平台：Docker 一键私有化部署、支持本地/国产模型，工具、提示词、身份、界面都由你定义。" />
   <meta property="og:image" content="https://robin202208.github.io/JUDY-website/assets/og-cover.png" />
   <meta property="og:image:width" content="1200" />
@@ -25,7 +25,7 @@
   <meta property="og:locale" id="ogLocale" content="zh_CN" />
   <meta property="og:locale:alternate" content="en_US" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" id="twTitle" content="JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）" />
+  <meta name="twitter:title" id="twTitle" content="JUDY — 私有化部署的 AI 员工运营台" />
   <meta name="twitter:description" id="twDesc" content="基于插件架构的智能体 Agent 平台：Docker 一键私有化部署、支持本地/国产模型，工具、提示词、身份、界面都由你定义。" />
   <meta name="twitter:image" content="https://robin202208.github.io/JUDY-website/assets/og-cover.png" />
 </head>
@@ -52,13 +52,14 @@
     <section class="hero">
       <img class="hero-logo" src="logo.png" alt="JUDY" width="104" height="104" />
       <h1>JUDY</h1>
-      <p class="tagline" data-i18n="hero.tagline">一切皆插件的 Agent Harness</p>
+      <p class="tagline" data-i18n="hero.tagline">私有化 · 一客一实例 · 交付物带证据链</p>
       <p class="sub" data-i18n="hero.sub">
-        每个能力都是一个插件，每个会话都可以组装成你专属的智能体。<br />
-        工具、提示词、身份、界面——都由你来定义。
+        每个客户一台独立实例，每个交付物都能回溯到具体的人和具体的时间。<br />
+        工具、提示词、身份、界面——都由你定义，版本与操作全部留痕。
       </p>
       <div class="cta">
-        <a class="btn primary" href="#quickstart" data-i18n="hero.cta1">快速开始</a>
+        <a class="btn primary" href="https://abc.judy.run/" data-i18n="hero.cta0">进入工作台 →</a>
+        <a class="btn ghost" href="#quickstart" data-i18n="hero.cta1">快速开始</a>
         <a class="btn ghost" href="https://github.com/robin202208/JUDY-harness" target="_blank" rel="noopener" data-i18n="hero.cta2">GitHub ↗</a>
       </div>
     </section>
@@ -138,7 +139,7 @@
     <!-- Screenshots -->
     <section id="shots" class="shots">
       <h2 data-i18n="shots.heading">真实界面，所见即所得</h2>
-      <p class="lead" data-i18n="shots.lead">会话、预设、插件组合——一切都在浏览器里直接完成，本地优先，开箱即用。</p>
+      <p class="lead" data-i18n="shots.lead">会话、预设模式、插件市场与专项能力——都在浏览器里完成。下面三张是 abc.judy.run 上的真实中文界面。</p>
       <div class="shot-grid">
         <figure class="shot main">
           <div class="frame">
@@ -146,23 +147,23 @@
             <img src="assets/gui-chat.png" alt="JUDY 会话主界面" data-i18n-alt="shots.1.alt" loading="lazy" />
             <div class="shot-missing" hidden><p data-i18n="shots.missing">截图待补充：请按 Cmd+Shift+4 截取会话界面后保存为 assets/gui-chat.png</p></div>
           </div>
-          <figcaption data-i18n="shots.1.cap">会话主界面：与你的专属 Agent 对话</figcaption>
+          <figcaption data-i18n="shots.1.cap">会话主界面：新建会话，直接开工</figcaption>
         </figure>
         <figure class="shot">
           <div class="frame">
             <div class="frame-bar"><span></span><span></span><span></span></div>
-            <img src="assets/gui-presets.png" alt="JUDY 预设选择" data-i18n-alt="shots.2.alt" loading="lazy" />
+            <img src="assets/gui-presets.png" alt="JUDY 预设模式选择" data-i18n-alt="shots.2.alt" loading="lazy" />
             <div class="shot-missing" hidden><p data-i18n="shots.missing">截图待补充：请截取新建会话的预设选择界面后保存为 assets/gui-presets.png</p></div>
           </div>
-          <figcaption data-i18n="shots.2.cap">预设选择：按角色组装你的 Agent</figcaption>
+          <figcaption data-i18n="shots.2.cap">预设模式：按任务挑工具与工作方式</figcaption>
         </figure>
         <figure class="shot">
           <div class="frame">
             <div class="frame-bar"><span></span><span></span><span></span></div>
-            <img src="assets/gui-compose.png" alt="JUDY 插件组合" data-i18n-alt="shots.3.alt" loading="lazy" />
+            <img src="assets/gui-compose.png" alt="JUDY 插件市场" data-i18n-alt="shots.3.alt" loading="lazy" />
             <div class="shot-missing" hidden><p data-i18n="shots.missing">截图待补充：请截取插件/组合配置界面后保存为 assets/gui-compose.png</p></div>
           </div>
-          <figcaption data-i18n="shots.3.cap">插件组合：每个能力都是一行插件</figcaption>
+          <figcaption data-i18n="shots.3.cap">插件市场：能力按插件启用，含 IP 打造等专项</figcaption>
         </figure>
       </div>
     </section>
@@ -206,8 +207,8 @@
 
     <!-- Industry presets -->
     <section id="presets" class="presets">
-      <h2 data-i18n="presets.heading">开箱即用的行业预设</h2>
-      <p class="lead" data-i18n="presets.lead">一行命令安装 8 个行业 Agent，覆盖运维、客服、数据分析、教学、审查与 IM 接入。</p>
+      <h2 data-i18n="presets.heading">随仓库提供的行业预设包</h2>
+      <p class="lead" data-i18n="presets.lead">9 个行业 Agent 预设包，覆盖运维、客服、数据分析、教学、审查、IM 接入与 IP 打造；每个包自带 persona、技能与示例产物。</p>
       <div class="grid">
         <article class="card">
           <div class="icon">🔧</div>
@@ -249,8 +250,13 @@
           <h3 data-i18n="presets.8.name">IM 接入</h3>
           <p data-i18n="presets.8.desc">企业微信/钉钉消息推送</p>
         </article>
+        <article class="card">
+          <div class="icon">🎬</div>
+          <h3 data-i18n="presets.9.name">IP 打造</h3>
+          <p data-i18n="presets.9.desc">定位、选题到 30 秒口播</p>
+        </article>
       </div>
-      <p class="hint" data-i18n="presets.hint">安装：bash presets/install.sh —— 安装后新建会话即可选用。</p>
+      <p class="hint" data-i18n="presets.hint">预设包在仓库 presets/industry/ 下，含 preset.yml、技能与说明；安装脚本为 bash presets/install.sh。</p>
     </section>
 
     <!-- Quick start -->
@@ -292,7 +298,7 @@ pnpm install && pnpm run build && pnpm dsh web
   <script>
     const I18N = {
       zh: {
-        title: 'JUDY — 一切皆插件的 Agent Harness（私有化部署 / 本地模型）',
+        title: 'JUDY — 私有化部署的 AI 员工运营台',
         desc: 'JUDY：基于插件架构的智能体 Agent 平台。一切皆插件，支持 Docker 一键私有化部署与本地/国产模型（Ollama、vLLM），每个会话都可以组装成你专属的 Agent。',
         lang: 'zh-CN',
         switchLabel: 'EN',
@@ -323,8 +329,9 @@ pnpm install && pnpm run build && pnpm dsh web
         'nav.quickstart': '快速开始',
         'nav.open': '开源',
         'nav.presets': '行业预设',
-        'hero.tagline': '改自己，才叫进化',
-        'hero.sub': '不改模型，改模型外面那套系统——八个可编辑组件、两层递归、经验库与三个校验器。\n每个会话都能组装成你专属的智能体。',
+        'hero.tagline': '私有化 · 一客一实例 · 交付物带证据链',
+        'hero.sub': '每个客户一台独立实例，每个交付物都能回溯到具体的人和具体的时间。\n工具、提示词、身份、界面——都由你定义，版本与操作全部留痕。',
+        'hero.cta0': '进入工作台 →',
         'hero.cta1': '快速开始',
         'hero.cta2': 'GitHub ↗',
         'feat.heading': '为什么选择 JUDY',
@@ -341,16 +348,16 @@ pnpm install && pnpm run build && pnpm dsh web
         'feat.6.title': '本地优先',
         'feat.6.desc': '会话、设置与数据都存于本机，隐私可控、离线可用，你的智能体只属于你。',
         'shots.heading': '真实界面，所见即所得',
-        'shots.lead': '会话、预设、插件组合——一切都在浏览器里直接完成，本地优先，开箱即用。',
+        'shots.lead': '会话、预设模式、插件市场与专项能力——都在浏览器里完成。下面三张是 abc.judy.run 上的真实中文界面。',
         'shots.1.alt': 'JUDY 会话主界面',
-        'shots.1.cap': '会话主界面：与你的专属 Agent 对话',
-        'shots.2.alt': 'JUDY 预设选择',
-        'shots.2.cap': '预设选择：按角色组装你的 Agent',
-        'shots.3.alt': 'JUDY 插件组合',
-        'shots.3.cap': '插件组合：每个能力都是一行插件',
+        'shots.1.cap': '会话主界面：新建会话，直接开工',
+        'shots.2.alt': 'JUDY 预设模式选择',
+        'shots.2.cap': '预设模式：按任务挑工具与工作方式',
+        'shots.3.alt': 'JUDY 插件市场',
+        'shots.3.cap': '插件市场：能力按插件启用，含 IP 打造等专项',
         'shots.missing': '截图待补充',
-        'presets.heading': '开箱即用的行业预设',
-        'presets.lead': '一行命令安装 8 个行业 Agent，覆盖运维、客服、数据分析、教学、审查与 IM 接入。',
+        'presets.heading': '随仓库提供的行业预设包',
+        'presets.lead': '9 个行业 Agent 预设包，覆盖运维、客服、数据分析、教学、审查、IM 接入与 IP 打造；每个包自带 persona、技能与示例产物。',
         'presets.1.name': '维护工程师',
         'presets.1.desc': '系统与代码维护',
         'presets.2.name': 'PDF 阅读器',
@@ -367,7 +374,9 @@ pnpm install && pnpm run build && pnpm dsh web
         'presets.7.desc': '正确性/安全/性能审查',
         'presets.8.name': 'IM 接入',
         'presets.8.desc': '企业微信/钉钉消息推送',
-        'presets.hint': '安装：bash presets/install.sh —— 安装后新建会话即可选用。',
+        'presets.9.name': 'IP 打造',
+        'presets.9.desc': '定位、选题到 30 秒口播',
+        'presets.hint': '预设包在仓库 presets/industry/ 下，含 preset.yml、技能与说明；安装脚本为 bash presets/install.sh。',
         'quick.heading': '快速开始',
         'quick.lead': '用 Docker 一键部署，或从源码运行：',
         'quick.hint': 'Docker 方式需要 Docker；源码方式需要 Node.js ≥ 22.19 与 pnpm。运行后即可在界面中选择或创建你的专属 Agent 预设。',
@@ -377,7 +386,7 @@ pnpm install && pnpm run build && pnpm dsh web
         'open.cta': '在 GitHub 上查看源码 ↗',
       },
       en: {
-        title: 'JUDY — The Agent Harness Where Everything Is a Plugin (Private Deployment / Local Models)',
+        title: 'JUDY — A Private AI-Worker Console You Deploy Yourself',
         desc: 'JUDY: a plugin-based agent harness. One-click private deployment via Docker, local & domestic models (Ollama, vLLM) supported — assemble your own agent for every session.',
         lang: 'en',
         switchLabel: '中文',
@@ -408,8 +417,9 @@ pnpm install && pnpm run build && pnpm dsh web
         'nav.quickstart': 'Quick Start',
         'nav.open': 'Open Source',
         'nav.presets': 'Presets',
-        'hero.tagline': 'Evolution Is Self-Rewriting',
-        'hero.sub': 'Rewrite the system around the model — eight editable components, two-level recursion,\nan experience library and three validators. Every session assembles into your own agent.',
+        'hero.tagline': 'Private by default · One instance per customer · Every deliverable carries evidence',
+        'hero.sub': 'One isolated instance per customer, and every deliverable traces back to a person and a time.\nTools, prompts, identity and UI are yours to define — all versioned and logged.',
+        'hero.cta0': 'Open the workbench →',
         'hero.cta1': 'Get Started',
         'hero.cta2': 'GitHub ↗',
         'feat.heading': 'Why JUDY',
@@ -426,16 +436,16 @@ pnpm install && pnpm run build && pnpm dsh web
         'feat.6.title': 'Local-First',
         'feat.6.desc': 'Sessions, settings, and data live on your machine: private, offline-capable, and yours alone.',
         'shots.heading': 'The Real Interface, Ready to Use',
-        'shots.lead': 'Chat, presets, and plugin composition — all in your browser, local-first, ready to go.',
+        'shots.lead': 'Sessions, preset modes, the plugin market and specialised workstreams — all in the browser. These three shots are the live Chinese UI on abc.judy.run.',
         'shots.1.alt': 'JUDY chat interface',
-        'shots.1.cap': 'Chat: talk to your own agent',
-        'shots.2.alt': 'JUDY preset picker',
-        'shots.2.cap': 'Presets: assemble an agent per role',
-        'shots.3.alt': 'JUDY plugin composition',
-        'shots.3.cap': 'Composition: every capability is one plugin row',
+        'shots.1.cap': 'Session view: start a new session and get to work',
+        'shots.2.alt': 'JUDY preset mode selection',
+        'shots.2.cap': 'Preset modes: pick tools and working style per task',
+        'shots.3.alt': 'JUDY plugin market',
+        'shots.3.cap': 'Plugin market: enable capabilities as plugins, including the IP studio',
         'shots.missing': 'Screenshot coming soon',
-        'presets.heading': 'Industry Presets, Ready to Go',
-        'presets.lead': 'Install 8 industry agents with one command — ops, support, data, tutoring, review, and IM.',
+        'presets.heading': 'Industry preset packs, shipped with the repo',
+        'presets.lead': 'Nine industry agent preset packs covering ops, support, analytics, teaching, review, IM and IP building; each ships with a persona, skills and sample output.',
         'presets.1.name': 'Maintenance Engineer',
         'presets.1.desc': 'System & code maintenance',
         'presets.2.name': 'PDF Reader',
@@ -452,7 +462,9 @@ pnpm install && pnpm run build && pnpm dsh web
         'presets.7.desc': 'Correctness, security & performance',
         'presets.8.name': 'IM Integration',
         'presets.8.desc': 'WeChat Work & DingTalk alerts',
-        'presets.hint': 'Install with bash presets/install.sh — then pick one when starting a session.',
+        'presets.9.name': 'IP Building',
+        'presets.9.desc': 'Positioning, topics, 30s scripts',
+        'presets.hint': 'The packs live in presets/industry/ with preset.yml, skills and docs; install with bash presets/install.sh.',
         'quick.heading': 'Quick Start',
         'quick.lead': 'Deploy with one click via Docker, or run from source:',
         'quick.hint': 'The Docker path needs Docker; the source path needs Node.js ≥ 22.19 and pnpm. After launching, pick or create your own agent preset in the UI.',
